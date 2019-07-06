@@ -391,18 +391,25 @@
     <div class="row">
     	<div class="span9">
         
-        	<form id="contact-form" class="contact-form" action="#">
+        	<form id="contact-form" class="contact-form" action="enviar.php" method="post">
             	<p class="contact-name">
-            		<input id="contact_name" type="text" placeholder="Full Name" value="" name="name" />
+            		<input id="contact_name" type="text" placeholder="Nombre Completo" value="" name="nombre" required="" />
+                </p>
+                <p class="contact-asunto">
+                    <input id="contact_asunto" type="text" placeholder="Asunto" value="" name="asunto" required="" />
+                </p>
+                <p class="contact-phone">
+                    <input id="contact_phone" type="text" placeholder="Telefono / Celular" value="" name="telefono" />
                 </p>
                 <p class="contact-email">
-                	<input id="contact_email" type="text" placeholder="Email Address" value="" name="email" />
+                	<input id="contact_email" type="text" placeholder="Correo Electronico" value="" name="correo" required="" />
                 </p>
                 <p class="contact-message">
-                	<textarea id="contact_message" placeholder="Your Message" name="message" rows="15" cols="40"></textarea>
+                	<textarea id="contact_message" placeholder="Your Message" name="mensaje" rows="15" cols="40" required=""></textarea>
                 </p>
                 <p class="contact-submit">
-                	<a id="contact-submit" class="submit" href="#">Send Your Email</a>
+                	<input type="submit" value="Enviar" id="btnSend" class="submit">
+                    <!-- <a id="contact-submit" class="submit" href="#">Enviar</a> -->
                 </p>
                 
                 <div id="response">
